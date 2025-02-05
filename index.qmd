@@ -1,0 +1,12 @@
+---
+title: "datafc Blog'a Hoş Geldiniz | Welcome to datafc Blog"
+format: html
+---
+
+```python
+datafc_tr_en = {
+    "Veri": "Data",
+    "Kod": "Code",
+    "Futbol": "Football"
+}
+```

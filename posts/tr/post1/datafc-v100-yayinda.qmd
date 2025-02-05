@@ -1,0 +1,220 @@
+---
+title: "datafc v1.0.0 Yayında!"
+author: "Uraz Akgül"
+date: "2025-02-05"
+categories: ["Paket"]
+format: html
+---
+
+# Paket ve Blog
+
+Futbol analitiği alanındaki çalışmalarımı bir adım ileriye taşımak adına geliştirdiğim `datafc` paketinin ilk sürümünü geçtiğimiz hafta yayınladım.
+
+Kullanıma başlamak için terminalde aşağıdaki komutu çalıştırabilirsiniz:
+
+```python
+pip install datafc
+```
+
+Paketle ilgili daha fazla bilgiye ulaşmak için [PyPI](https://pypi.org/project/datafc/){target="_blank"} veya [GitHub](https://github.com/urazakgul/datafc){target="_blank"} sayfasını ziyaret edebilirsiniz.
+
+Bununla birlikte, `datafc` çatısı altında ve veri, kod ve futbol üçgeninde içerikler üretmek amacıyla blog sayfası oluşturdum.
+
+# İlk Sürümün Amacı
+
+Futbol analitiğinde veriye dayalı kararlar almak için doğru, temiz ve erişilebilir veri kritik bir öneme sahiptir. `datafc`, bu ihtiyacı karşılamak amacıyla veri çekme, işleme ve dışa aktarma süreçlerini optimize eden bir Python paketi olarak geliştirildi.
+
+## Temel Süreçler
+
+* **Veri Çekme**: Futbol verilerinin çeşitli kaynaklardan otomatik olarak toplanmasını kapsar.
+* **Veri İşleme**: Toplanan ham verilerin analize uygun hale getirilmesi için çeşitli işlemler uygulanır.
+* **Veri Dışa Aktarma**: İşlenmiş veriler, kullanıcıların kendi analiz süreçlerinde veya farklı platformlarda kullanabilmesi için çeşitli formatlarda dışa aktarılabilir.
+
+Bu üç aşamalı yapı sayesinde `datafc`, futbol verisiyle çalışan herkes için hızlı, pratik ve güvenilir bir çözüm sunmayı hedefliyor.
+
+# Selenium Kullanımı
+
+Futbol verilerini güvenilir ve tutarlı bir şekilde çekebilmek, analitik süreçlerin sağlıklı işlemesi için kritik bir gerekliliktir. Ancak, doğrudan API veya HTTP istekleriyle veri çekme girişimlerimde aynı maç verileri için yapılan farklı taleplerin tutarsız sonuçlar ürettiğini gözlemledim.
+
+Bu sorunu aşmak ve daha güvenilir bir veri çekme süreci oluşturmak için `datafc`, Selenium WebDriver kullanmaktadır. Bu sayede `datafc`, Sofascore gibi platformlardan veriyi doğrudan tarayıcı üzerinden yüklenen sayfa içeriğinden alarak eksiksiz ve tutarlı bir şekilde futbol analitiği çalışmalarında sağlam bir temel oluşturur.
+
+# `match_data` ve `lineups_data` Bağımlılıkları
+
+`datafc`, veri çekme sürecinin verimliliğini artırmak ve gereksiz istekleri önlemek amacıyla, belirli fonksiyonları doğrudan veri kaynağına erişmek yerine merkezi veri yapılarına bağımlı olarak çalışacak şekilde tasarlandı.
+
+Bu yapı sayesinde:
+
+* Her fonksiyonun ayrı ayrı veri çekme isteği göndermesi engellenir.
+* Gereksiz ağ trafiği önlenerek performans optimizasyonu sağlanır.
+
+## `match_data`
+
+Maçlara ilişkin temel bilgileri içerdiğinden, aşağıdaki altı fonksiyon, veriyi yeniden çekmek yerine mevcut `match_data` çıktısını kullanır:
+
+* `match_odds_data`
+* `match_stats_data`
+* `momentum_data`
+* `lineups_data`
+* `substitutions_data`
+* `goal_networks_data`
+* `shots_data`
+
+## `lineups_data`
+
+Oyuncu kadrolarını içerdiğinden, `coordinates_data` fonksiyonu doğrudan bu veriyi kullanarak gereksiz veri çekimlerini önler. Ancak, `lineups_data` fonksiyonunun çalışabilmesi için `match_data` gereklidir.
+
+## `standings_data`
+
+Tamamen bağımsızdır ve herhangi bir veri kaynağına bağımlı olmadan doğrudan çalıştırılabilir.
+
+Bu bağımlılık yönetimi, veri çekme sürecini hızlandırarak gereksiz tekrarları ortadan kaldırmak ve analiz süreçlerini daha verimli hale getirmek için geliştirilmiştir.
+
+# Uygulama
+
+Bir örnek senaryo üzerinden `datafc` kullanımını inceleyelim.
+
+Süper Lig 2024/25 sezonunun 22. haftasındaki 10 farklı veriyi çekmek istediğimizi düşünelim.
+
+Süper Lig ve 2024/25 sezonuna ait ID bilgileri sırasıyla 52 ve 63814 olarak belirlenmiştir. Bu bilgileri doğrudan [Sofascore'un web sitesi](https://www.sofascore.com/tr/turnuva/futbol/turkey/trendyol-super-lig/52#id:63814){target="_blank"} üzerinden temin edebilirsiniz.
+
+![](imgs/img1.PNG)
+
+## Paketin İçe Aktarılması
+
+```python
+from datafc.sofascore import (
+    match_data,
+    match_odds_data,
+    match_stats_data,
+    momentum_data,
+    lineups_data,
+    coordinates_data,
+    substitutions_data,
+    goal_networks_data,
+    shots_data,
+    standings_data
+)
+```
+
+## `match_data` Bağımlı Çalışan Fonksiyonlar
+
+```python
+match_df = match_data(
+    tournament_id=52,
+    season_id=63814,
+    week_number=22
+)
+```
+
+![](imgs/img2.PNG)
+
+### `match_odds_data`
+
+```python
+match_odds_df = match_odds_data(
+    match_df=match_df
+)
+```
+
+![](imgs/img3.PNG)
+
+### `match_stats_data`
+
+```python
+match_stats_df = match_stats_data(
+    match_df=match_df
+)
+```
+
+![](imgs/img4.PNG)
+
+### `momentum_data`
+
+```python
+momentum_df = momentum_data(
+    match_df=match_df
+)
+```
+
+![](imgs/img5.PNG)
+
+### `lineups_data`
+
+```python
+lineups_df = lineups_data(
+    match_df=match_df
+)
+```
+
+![](imgs/img6.PNG)
+
+### `substitutions_data`
+
+```python
+substitutions_df = substitutions_data(
+    match_df=match_df
+)
+```
+
+![](imgs/img7.PNG)
+
+### `goal_networks_data`
+
+```python
+goal_networks_df = goal_networks_data(
+    match_df=match_df
+)
+```
+
+![](imgs/img8.PNG)
+
+### `shots_data`
+
+```python
+shots_df = shots_data(
+    match_df=match_df
+)
+```
+
+![](imgs/img9.PNG)
+
+## `lineups_data` Bağımlı Çalışan Fonksiyonlar
+
+`lineups_data` da `match_data` bağımlı çalıştığı için aslında öncesinde çekmiş olduk.
+
+### `coordinates_data`
+
+```python
+coordinates_df = coordinates_data(
+    lineups_df=lineups_df
+)
+```
+
+![](imgs/img10.PNG)
+
+## Bağımlı Çalışmayan Fonksiyon
+
+`standings_data`, herhangi bir bağımlılık olmadan çalışmaktadır.
+
+### `standings_data`
+
+```python
+standings_df = standings_data(
+    tournament_id=52,
+    season_id=63814
+)
+```
+
+![](imgs/img11.PNG)
+
+# Sonuç
+
+`datafc`, uzun süredir lokal ortamda geliştirdiğim ve özellikle web uygulamamda aktif olarak kullandığım kodların paket haline getirilmiş versiyonudur. Futbol verilerini daha erişilebilir, düzenli ve verimli bir şekilde yönetmek için oluşturulan bu paket, veri çekme, işleme ve dışa aktarma süreçlerini otomatikleştirerek analitik çalışmaların hızını ve doğruluğunu artırmayı amaçlamaktadır.
+
+Henüz v1.0.0 sürümünde olmasına rağmen, zamanla gelecek yeni özellikler, performans iyileştirmeleri ve genişletilmiş veri kaynaklarıyla futbol analitiği dünyasında önemli bir yer edinmeyi hedeflemektedir. Gelecekteki sürümlerde, farklı veri sağlayıcılarıyla entegrasyon, analiz ve görselleştirme araçları, gelişmiş istatistiksel modelleme gibi pek çok yeni özellik planlanmaktadır.
+
+Bu yolculukta, geri bildirimleriniz ve katkılarınız, paketin gelişimine büyük değer katacaktır. `datafc`'nin sunduğu altyapıyı daha da ileriye taşımak ve futbol verisiyle çalışan herkes için güçlü bir kaynak haline getirmek en büyük hedefimdir.
+
+Futbol analitiğine ilgi duyan herkesin bu ekosisteme dahil olması ve `datafc`'yi kendi projelerinde kullanarak katkı sağlaması dileğiyle.
+
+Sevgiler.

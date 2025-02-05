@@ -1,0 +1,8 @@
+---
+title: "datafc | English"
+format: html
+---
+
+# English Blog Posts
+
+- 📄 [datafc v1.0.0 is Live!](post1/datafc-v100-is-live.qmd){target="_blank"}

@@ -1,0 +1,30 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "datafc Blog"
+  navbar:
+    left:
+      - text: "Home"
+        href: index.qmd
+      - text: "Türkçe"
+        href: posts/tr/index.qmd
+      - text: "English"
+        href: posts/en/index.qmd
+    right:
+      - icon: github
+        href: "https://github.com/urazdev"
+        target: "_blank"
+      - icon: twitter-x
+        href: "https://twitter.com/urazdev"
+        target: "_blank"
+      - icon: linkedin
+        href: "https://www.linkedin.com/in/urazakgul/"
+        target: "_blank"
+format:
+  html:
+    theme:
+      light: flatly
+      dark: darkly
+    toc: true
