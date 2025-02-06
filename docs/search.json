@@ -1,66 +1,38 @@
 [
   {
-    "objectID": "posts/tr/post1/datafc-v100-yayinda.html",
-    "href": "posts/tr/post1/datafc-v100-yayinda.html",
-    "title": "datafc v1.0.0 Yayında!",
+    "objectID": "posts/tr/post2/datafc-v110-yayinda.html",
+    "href": "posts/tr/post2/datafc-v110-yayinda.html",
+    "title": "datafc v1.1.0 Yayında!",
     "section": "",
-    "text": "Futbol analitiği alanındaki çalışmalarımı bir adım ileriye taşımak adına geliştirdiğim datafc paketinin ilk sürümünü geçtiğimiz hafta yayınladım.\nKullanıma başlamak için terminalde aşağıdaki komutu çalıştırabilirsiniz:\npip install datafc\nPaketle ilgili daha fazla bilgiye ulaşmak için PyPI veya GitHub sayfasını ziyaret edebilirsiniz.\nBununla birlikte, datafc çatısı altında ve veri, kod ve futbol üçgeninde içerikler üretmek amacıyla blog sayfası oluşturdum."
+    "text": "Yeni sürümde match_data veri setine önemli eklemeler yapıldı. Bu güncellemeler, veri analizi süreçlerini daha verimli ve anlamlı hale getirmek için tasarlandı.\nYeni sürüme geçmek için aşağıdaki adımları takip edebilirsiniz.\nEğer datafc paketi halihazırda yüklüyse, en son sürüme güncellemek için şu komutu terminalde çalıştırabilirsiniz:\npip install --upgrade datafc\nEğer datafc paketini ilk kez yükleyecekseniz, şu komutu kullanabilirsiniz:\npip install datafc\nPaketle ilgili daha fazla bilgiye ulaşmak için PyPI veya GitHub sayfasını ziyaret edebilirsiniz."
   },
   {
-    "objectID": "posts/tr/post1/datafc-v100-yayinda.html#temel-süreçler",
-    "href": "posts/tr/post1/datafc-v100-yayinda.html#temel-süreçler",
-    "title": "datafc v1.0.0 Yayında!",
-    "section": "Temel Süreçler",
-    "text": "Temel Süreçler\n\nVeri Çekme: Futbol verilerinin çeşitli kaynaklardan otomatik olarak toplanmasını kapsar.\nVeri İşleme: Toplanan ham verilerin analize uygun hale getirilmesi için çeşitli işlemler uygulanır.\nVeri Dışa Aktarma: İşlenmiş veriler, kullanıcıların kendi analiz süreçlerinde veya farklı platformlarda kullanabilmesi için çeşitli formatlarda dışa aktarılabilir.\n\nBu üç aşamalı yapı sayesinde datafc, futbol verisiyle çalışan herkes için hızlı, pratik ve güvenilir bir çözüm sunmayı hedefliyor."
+    "objectID": "posts/tr/post2/datafc-v110-yayinda.html#takım-kimlikleri",
+    "href": "posts/tr/post2/datafc-v110-yayinda.html#takım-kimlikleri",
+    "title": "datafc v1.1.0 Yayında!",
+    "section": "Takım Kimlikleri",
+    "text": "Takım Kimlikleri\nAşağıdaki kolonlar eklendi:\n\nhome_team_id: Ev sahibi takımın kimlik numarası\naway_team_id: Deplasman takımının kimlik numarası"
   },
   {
-    "objectID": "posts/tr/post1/datafc-v100-yayinda.html#match_data",
-    "href": "posts/tr/post1/datafc-v100-yayinda.html#match_data",
-    "title": "datafc v1.0.0 Yayında!",
-    "section": "match_data",
-    "text": "match_data\nMaçlara ilişkin temel bilgileri içerdiğinden, aşağıdaki altı fonksiyon, veriyi yeniden çekmek yerine mevcut match_data çıktısını kullanır:\n\nmatch_odds_data\nmatch_stats_data\nmomentum_data\nlineups_data\nsubstitutions_data\ngoal_networks_data\nshots_data"
+    "objectID": "posts/tr/post2/datafc-v110-yayinda.html#uzatma-süreleri",
+    "href": "posts/tr/post2/datafc-v110-yayinda.html#uzatma-süreleri",
+    "title": "datafc v1.1.0 Yayında!",
+    "section": "Uzatma Süreleri",
+    "text": "Uzatma Süreleri\nAşağıdaki kolonlar eklendi:\n\ninjury_time_1: İlk yarının uzatma süresi\ninjury_time_2: İkinci yarının uzatma süresi"
   },
   {
-    "objectID": "posts/tr/post1/datafc-v100-yayinda.html#lineups_data",
-    "href": "posts/tr/post1/datafc-v100-yayinda.html#lineups_data",
-    "title": "datafc v1.0.0 Yayında!",
-    "section": "lineups_data",
-    "text": "lineups_data\nOyuncu kadrolarını içerdiğinden, coordinates_data fonksiyonu doğrudan bu veriyi kullanarak gereksiz veri çekimlerini önler. Ancak, lineups_data fonksiyonunun çalışabilmesi için match_data gereklidir."
+    "objectID": "posts/tr/post2/datafc-v110-yayinda.html#dosya-kaynağı-bilgisi",
+    "href": "posts/tr/post2/datafc-v110-yayinda.html#dosya-kaynağı-bilgisi",
+    "title": "datafc v1.1.0 Yayında!",
+    "section": "Dosya Kaynağı Bilgisi",
+    "text": "Dosya Kaynağı Bilgisi\nKayıt edilen dosyanın başına, verinin hangi kaynaktan çekildiğini belirten bir ad eklendi."
   },
   {
-    "objectID": "posts/tr/post1/datafc-v100-yayinda.html#standings_data",
-    "href": "posts/tr/post1/datafc-v100-yayinda.html#standings_data",
-    "title": "datafc v1.0.0 Yayında!",
-    "section": "standings_data",
-    "text": "standings_data\nTamamen bağımsızdır ve herhangi bir veri kaynağına bağımlı olmadan doğrudan çalıştırılabilir.\nBu bağımlılık yönetimi, veri çekme sürecini hızlandırarak gereksiz tekrarları ortadan kaldırmak ve analiz süreçlerini daha verimli hale getirmek için geliştirilmiştir."
-  },
-  {
-    "objectID": "posts/tr/post1/datafc-v100-yayinda.html#paketin-içe-aktarılması",
-    "href": "posts/tr/post1/datafc-v100-yayinda.html#paketin-içe-aktarılması",
-    "title": "datafc v1.0.0 Yayında!",
-    "section": "Paketin İçe Aktarılması",
-    "text": "Paketin İçe Aktarılması\nfrom datafc.sofascore import (\n    match_data,\n    match_odds_data,\n    match_stats_data,\n    momentum_data,\n    lineups_data,\n    coordinates_data,\n    substitutions_data,\n    goal_networks_data,\n    shots_data,\n    standings_data\n)"
-  },
-  {
-    "objectID": "posts/tr/post1/datafc-v100-yayinda.html#match_data-bağımlı-çalışan-fonksiyonlar",
-    "href": "posts/tr/post1/datafc-v100-yayinda.html#match_data-bağımlı-çalışan-fonksiyonlar",
-    "title": "datafc v1.0.0 Yayında!",
-    "section": "match_data Bağımlı Çalışan Fonksiyonlar",
-    "text": "match_data Bağımlı Çalışan Fonksiyonlar\nmatch_df = match_data(\n    tournament_id=52,\n    season_id=63814,\n    week_number=22\n)\n\n\nmatch_odds_data\nmatch_odds_df = match_odds_data(\n    match_df=match_df\n)\n\n\n\nmatch_stats_data\nmatch_stats_df = match_stats_data(\n    match_df=match_df\n)\n\n\n\nmomentum_data\nmomentum_df = momentum_data(\n    match_df=match_df\n)\n\n\n\nlineups_data\nlineups_df = lineups_data(\n    match_df=match_df\n)\n\n\n\nsubstitutions_data\nsubstitutions_df = substitutions_data(\n    match_df=match_df\n)\n\n\n\ngoal_networks_data\ngoal_networks_df = goal_networks_data(\n    match_df=match_df\n)\n\n\n\nshots_data\nshots_df = shots_data(\n    match_df=match_df\n)"
-  },
-  {
-    "objectID": "posts/tr/post1/datafc-v100-yayinda.html#lineups_data-bağımlı-çalışan-fonksiyonlar",
-    "href": "posts/tr/post1/datafc-v100-yayinda.html#lineups_data-bağımlı-çalışan-fonksiyonlar",
-    "title": "datafc v1.0.0 Yayında!",
-    "section": "lineups_data Bağımlı Çalışan Fonksiyonlar",
-    "text": "lineups_data Bağımlı Çalışan Fonksiyonlar\nlineups_data da match_data bağımlı çalıştığı için aslında öncesinde çekmiş olduk.\n\ncoordinates_data\ncoordinates_df = coordinates_data(\n    lineups_df=lineups_df\n)"
-  },
-  {
-    "objectID": "posts/tr/post1/datafc-v100-yayinda.html#bağımlı-çalışmayan-fonksiyon",
-    "href": "posts/tr/post1/datafc-v100-yayinda.html#bağımlı-çalışmayan-fonksiyon",
-    "title": "datafc v1.0.0 Yayında!",
-    "section": "Bağımlı Çalışmayan Fonksiyon",
-    "text": "Bağımlı Çalışmayan Fonksiyon\nstandings_data, herhangi bir bağımlılık olmadan çalışmaktadır.\n\nstandings_data\nstandings_df = standings_data(\n    tournament_id=52,\n    season_id=63814\n)"
+    "objectID": "posts/tr/index.html",
+    "href": "posts/tr/index.html",
+    "title": "datafc | Türkçe",
+    "section": "",
+    "text": "Türkçe Blog Yazıları\n\n📄 datafc v1.0.0 Yayında!\n📄 datafc v1.1.0 Yayında!"
   },
   {
     "objectID": "posts/en/post1/datafc-v100-is-live.html",
@@ -140,41 +112,6 @@
     "text": "English Blog Posts\n\n📄 datafc v1.0.0 is Live!\n📄 datafc v1.1.0 is Live!"
   },
   {
-    "objectID": "posts/tr/index.html",
-    "href": "posts/tr/index.html",
-    "title": "datafc | Türkçe",
-    "section": "",
-    "text": "Türkçe Blog Yazıları\n\n📄 datafc v1.0.0 Yayında!\n📄 datafc v1.1.0 Yayında!"
-  },
-  {
-    "objectID": "posts/tr/post2/datafc-v110-yayinda.html",
-    "href": "posts/tr/post2/datafc-v110-yayinda.html",
-    "title": "datafc v1.1.0 Yayında!",
-    "section": "",
-    "text": "Yeni sürümde match_data veri setine önemli eklemeler yapıldı. Bu güncellemeler, veri analizi süreçlerini daha verimli ve anlamlı hale getirmek için tasarlandı.\nYeni sürüme geçmek için aşağıdaki adımları takip edebilirsiniz.\nEğer datafc paketi halihazırda yüklüyse, en son sürüme güncellemek için şu komutu terminalde çalıştırabilirsiniz:\npip install --upgrade datafc\nEğer datafc paketini ilk kez yükleyecekseniz, şu komutu kullanabilirsiniz:\npip install datafc\nPaketle ilgili daha fazla bilgiye ulaşmak için PyPI veya GitHub sayfasını ziyaret edebilirsiniz."
-  },
-  {
-    "objectID": "posts/tr/post2/datafc-v110-yayinda.html#takım-kimlikleri",
-    "href": "posts/tr/post2/datafc-v110-yayinda.html#takım-kimlikleri",
-    "title": "datafc v1.1.0 Yayında!",
-    "section": "Takım Kimlikleri",
-    "text": "Takım Kimlikleri\nAşağıdaki kolonlar eklendi:\n\nhome_team_id: Ev sahibi takımın kimlik numarası\naway_team_id: Deplasman takımının kimlik numarası"
-  },
-  {
-    "objectID": "posts/tr/post2/datafc-v110-yayinda.html#uzatma-süreleri",
-    "href": "posts/tr/post2/datafc-v110-yayinda.html#uzatma-süreleri",
-    "title": "datafc v1.1.0 Yayında!",
-    "section": "Uzatma Süreleri",
-    "text": "Uzatma Süreleri\nAşağıdaki kolonlar eklendi:\n\ninjury_time_1: İlk yarının uzatma süresi\ninjury_time_2: İkinci yarının uzatma süresi"
-  },
-  {
-    "objectID": "posts/tr/post2/datafc-v110-yayinda.html#dosya-kaynağı-bilgisi",
-    "href": "posts/tr/post2/datafc-v110-yayinda.html#dosya-kaynağı-bilgisi",
-    "title": "datafc v1.1.0 Yayında!",
-    "section": "Dosya Kaynağı Bilgisi",
-    "text": "Dosya Kaynağı Bilgisi\nKayıt edilen dosyanın başına, verinin hangi kaynaktan çekildiğini belirten bir ad eklendi."
-  },
-  {
     "objectID": "posts/en/post2/datafc-v110-is-live.html",
     "href": "posts/en/post2/datafc-v110-is-live.html",
     "title": "datafc v1.1.0 is Live!",
@@ -201,5 +138,68 @@
     "title": "datafc v1.1.0 is Live!",
     "section": "File Source Information",
     "text": "File Source Information\nThe saved file now includes a prefix indicating the data source."
+  },
+  {
+    "objectID": "posts/tr/post1/datafc-v100-yayinda.html",
+    "href": "posts/tr/post1/datafc-v100-yayinda.html",
+    "title": "datafc v1.0.0 Yayında!",
+    "section": "",
+    "text": "Futbol analitiği alanındaki çalışmalarımı bir adım ileriye taşımak adına geliştirdiğim datafc paketinin ilk sürümünü geçtiğimiz hafta yayınladım.\nKullanıma başlamak için terminalde aşağıdaki komutu çalıştırabilirsiniz:\npip install datafc\nPaketle ilgili daha fazla bilgiye ulaşmak için PyPI veya GitHub sayfasını ziyaret edebilirsiniz.\nBununla birlikte, datafc çatısı altında ve veri, kod ve futbol üçgeninde içerikler üretmek amacıyla blog sayfası oluşturdum."
+  },
+  {
+    "objectID": "posts/tr/post1/datafc-v100-yayinda.html#temel-süreçler",
+    "href": "posts/tr/post1/datafc-v100-yayinda.html#temel-süreçler",
+    "title": "datafc v1.0.0 Yayında!",
+    "section": "Temel Süreçler",
+    "text": "Temel Süreçler\n\nVeri Çekme: Futbol verilerinin çeşitli kaynaklardan otomatik olarak toplanmasını kapsar.\nVeri İşleme: Toplanan ham verilerin analize uygun hale getirilmesi için çeşitli işlemler uygulanır.\nVeri Dışa Aktarma: İşlenmiş veriler, kullanıcıların kendi analiz süreçlerinde veya farklı platformlarda kullanabilmesi için çeşitli formatlarda dışa aktarılabilir.\n\nBu üç aşamalı yapı sayesinde datafc, futbol verisiyle çalışan herkes için hızlı, pratik ve güvenilir bir çözüm sunmayı hedefliyor."
+  },
+  {
+    "objectID": "posts/tr/post1/datafc-v100-yayinda.html#match_data",
+    "href": "posts/tr/post1/datafc-v100-yayinda.html#match_data",
+    "title": "datafc v1.0.0 Yayında!",
+    "section": "match_data",
+    "text": "match_data\nMaçlara ilişkin temel bilgileri içerdiğinden, aşağıdaki altı fonksiyon, veriyi yeniden çekmek yerine mevcut match_data çıktısını kullanır:\n\nmatch_odds_data\nmatch_stats_data\nmomentum_data\nlineups_data\nsubstitutions_data\ngoal_networks_data\nshots_data"
+  },
+  {
+    "objectID": "posts/tr/post1/datafc-v100-yayinda.html#lineups_data",
+    "href": "posts/tr/post1/datafc-v100-yayinda.html#lineups_data",
+    "title": "datafc v1.0.0 Yayında!",
+    "section": "lineups_data",
+    "text": "lineups_data\nOyuncu kadrolarını içerdiğinden, coordinates_data fonksiyonu doğrudan bu veriyi kullanarak gereksiz veri çekimlerini önler. Ancak, lineups_data fonksiyonunun çalışabilmesi için match_data gereklidir."
+  },
+  {
+    "objectID": "posts/tr/post1/datafc-v100-yayinda.html#standings_data",
+    "href": "posts/tr/post1/datafc-v100-yayinda.html#standings_data",
+    "title": "datafc v1.0.0 Yayında!",
+    "section": "standings_data",
+    "text": "standings_data\nTamamen bağımsızdır ve herhangi bir veri kaynağına bağımlı olmadan doğrudan çalıştırılabilir.\nBu bağımlılık yönetimi, veri çekme sürecini hızlandırarak gereksiz tekrarları ortadan kaldırmak ve analiz süreçlerini daha verimli hale getirmek için geliştirilmiştir."
+  },
+  {
+    "objectID": "posts/tr/post1/datafc-v100-yayinda.html#paketin-içe-aktarılması",
+    "href": "posts/tr/post1/datafc-v100-yayinda.html#paketin-içe-aktarılması",
+    "title": "datafc v1.0.0 Yayında!",
+    "section": "Paketin İçe Aktarılması",
+    "text": "Paketin İçe Aktarılması\nfrom datafc.sofascore import (\n    match_data,\n    match_odds_data,\n    match_stats_data,\n    momentum_data,\n    lineups_data,\n    coordinates_data,\n    substitutions_data,\n    goal_networks_data,\n    shots_data,\n    standings_data\n)"
+  },
+  {
+    "objectID": "posts/tr/post1/datafc-v100-yayinda.html#match_data-bağımlı-çalışan-fonksiyonlar",
+    "href": "posts/tr/post1/datafc-v100-yayinda.html#match_data-bağımlı-çalışan-fonksiyonlar",
+    "title": "datafc v1.0.0 Yayında!",
+    "section": "match_data Bağımlı Çalışan Fonksiyonlar",
+    "text": "match_data Bağımlı Çalışan Fonksiyonlar\nmatch_df = match_data(\n    tournament_id=52,\n    season_id=63814,\n    week_number=22\n)\n\n\nmatch_odds_data\nmatch_odds_df = match_odds_data(\n    match_df=match_df\n)\n\n\n\nmatch_stats_data\nmatch_stats_df = match_stats_data(\n    match_df=match_df\n)\n\n\n\nmomentum_data\nmomentum_df = momentum_data(\n    match_df=match_df\n)\n\n\n\nlineups_data\nlineups_df = lineups_data(\n    match_df=match_df\n)\n\n\n\nsubstitutions_data\nsubstitutions_df = substitutions_data(\n    match_df=match_df\n)\n\n\n\ngoal_networks_data\ngoal_networks_df = goal_networks_data(\n    match_df=match_df\n)\n\n\n\nshots_data\nshots_df = shots_data(\n    match_df=match_df\n)"
+  },
+  {
+    "objectID": "posts/tr/post1/datafc-v100-yayinda.html#lineups_data-bağımlı-çalışan-fonksiyonlar",
+    "href": "posts/tr/post1/datafc-v100-yayinda.html#lineups_data-bağımlı-çalışan-fonksiyonlar",
+    "title": "datafc v1.0.0 Yayında!",
+    "section": "lineups_data Bağımlı Çalışan Fonksiyonlar",
+    "text": "lineups_data Bağımlı Çalışan Fonksiyonlar\nlineups_data da match_data bağımlı çalıştığı için aslında öncesinde çekmiş olduk.\n\ncoordinates_data\ncoordinates_df = coordinates_data(\n    lineups_df=lineups_df\n)"
+  },
+  {
+    "objectID": "posts/tr/post1/datafc-v100-yayinda.html#bağımlı-çalışmayan-fonksiyon",
+    "href": "posts/tr/post1/datafc-v100-yayinda.html#bağımlı-çalışmayan-fonksiyon",
+    "title": "datafc v1.0.0 Yayında!",
+    "section": "Bağımlı Çalışmayan Fonksiyon",
+    "text": "Bağımlı Çalışmayan Fonksiyon\nstandings_data, herhangi bir bağımlılık olmadan çalışmaktadır.\n\nstandings_data\nstandings_df = standings_data(\n    tournament_id=52,\n    season_id=63814\n)"
   }
 ]
