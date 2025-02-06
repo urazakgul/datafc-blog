@@ -137,13 +137,69 @@
     "href": "posts/en/index.html",
     "title": "datafc | English",
     "section": "",
-    "text": "English Blog Posts\n\n📄 datafc v1.0.0 is Live!"
+    "text": "English Blog Posts\n\n📄 datafc v1.0.0 is Live!\n📄 datafc v1.1.0 is Live!"
   },
   {
     "objectID": "posts/tr/index.html",
     "href": "posts/tr/index.html",
     "title": "datafc | Türkçe",
     "section": "",
-    "text": "Türkçe Blog Yazıları\n\n📄 datafc v1.0.0 Yayında!"
+    "text": "Türkçe Blog Yazıları\n\n📄 datafc v1.0.0 Yayında!\n📄 datafc v1.1.0 Yayında!"
+  },
+  {
+    "objectID": "posts/tr/post2/datafc-v110-yayinda.html",
+    "href": "posts/tr/post2/datafc-v110-yayinda.html",
+    "title": "datafc v1.1.0 Yayında!",
+    "section": "",
+    "text": "Yeni sürümde match_data veri setine önemli eklemeler yapıldı. Bu güncellemeler, veri analizi süreçlerini daha verimli ve anlamlı hale getirmek için tasarlandı.\nYeni sürüme geçmek için aşağıdaki adımları takip edebilirsiniz.\nEğer datafc paketi halihazırda yüklüyse, en son sürüme güncellemek için şu komutu terminalde çalıştırabilirsiniz:\npip install --upgrade datafc\nEğer datafc paketini ilk kez yükleyecekseniz, şu komutu kullanabilirsiniz:\npip install datafc\nPaketle ilgili daha fazla bilgiye ulaşmak için PyPI veya GitHub sayfasını ziyaret edebilirsiniz."
+  },
+  {
+    "objectID": "posts/tr/post2/datafc-v110-yayinda.html#takım-kimlikleri",
+    "href": "posts/tr/post2/datafc-v110-yayinda.html#takım-kimlikleri",
+    "title": "datafc v1.1.0 Yayında!",
+    "section": "Takım Kimlikleri",
+    "text": "Takım Kimlikleri\nAşağıdaki kolonlar eklendi:\n\nhome_team_id: Ev sahibi takımın kimlik numarası\naway_team_id: Deplasman takımının kimlik numarası"
+  },
+  {
+    "objectID": "posts/tr/post2/datafc-v110-yayinda.html#uzatma-süreleri",
+    "href": "posts/tr/post2/datafc-v110-yayinda.html#uzatma-süreleri",
+    "title": "datafc v1.1.0 Yayında!",
+    "section": "Uzatma Süreleri",
+    "text": "Uzatma Süreleri\nAşağıdaki kolonlar eklendi:\n\ninjury_time_1: İlk yarının uzatma süresi\ninjury_time_2: İkinci yarının uzatma süresi"
+  },
+  {
+    "objectID": "posts/tr/post2/datafc-v110-yayinda.html#dosya-kaynağı-bilgisi",
+    "href": "posts/tr/post2/datafc-v110-yayinda.html#dosya-kaynağı-bilgisi",
+    "title": "datafc v1.1.0 Yayında!",
+    "section": "Dosya Kaynağı Bilgisi",
+    "text": "Dosya Kaynağı Bilgisi\nKayıt edilen dosyanın başına, verinin hangi kaynaktan çekildiğini belirten bir ad eklendi."
+  },
+  {
+    "objectID": "posts/en/post2/datafc-v110-is-live.html",
+    "href": "posts/en/post2/datafc-v110-is-live.html",
+    "title": "datafc v1.1.0 is Live!",
+    "section": "",
+    "text": "This new version introduces important additions to the match_data dataset. These updates are designed to make data analysis more efficient and meaningful.\nFollow the steps below to upgrade to the latest version.\nIf the datafc package is already installed, you can update to the latest version by running the following command in the terminal:\npip install --upgrade datafc\nIf you haven’t installed datafc before, use the following command:\npip install datafc\nFor more details about the package, you can visit its PyPI or GitHub pages."
+  },
+  {
+    "objectID": "posts/en/post2/datafc-v110-is-live.html#team-ids",
+    "href": "posts/en/post2/datafc-v110-is-live.html#team-ids",
+    "title": "datafc v1.1.0 is Live!",
+    "section": "Team IDs",
+    "text": "Team IDs\nThe following columns have been added:\n\nhome_team_id: Home team ID\naway_team_id: Away team ID"
+  },
+  {
+    "objectID": "posts/en/post2/datafc-v110-is-live.html#injury-time",
+    "href": "posts/en/post2/datafc-v110-is-live.html#injury-time",
+    "title": "datafc v1.1.0 is Live!",
+    "section": "Injury Time",
+    "text": "Injury Time\nThe following columns have been added:\n\ninjury_time_1: First-half injury time\ninjury_time_2: Second-half injury time"
+  },
+  {
+    "objectID": "posts/en/post2/datafc-v110-is-live.html#file-source-information",
+    "href": "posts/en/post2/datafc-v110-is-live.html#file-source-information",
+    "title": "datafc v1.1.0 is Live!",
+    "section": "File Source Information",
+    "text": "File Source Information\nThe saved file now includes a prefix indicating the data source."
   }
 ]

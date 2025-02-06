@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Uraz Akgül">
+<meta name="dcterms.date" content="2025-02-06">
 
-<title>datafc | English – datafc Blog</title>
+<title>datafc v1.1.0 is Live! – datafc Blog</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,27 +22,61 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
-<script src="../../site_libs/quarto-html/quarto.js"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-8ea72dc5fed832574809a9c94082fbbb.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-f3c2ea88cadbcfb37ba28ffa2c97cfc1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-ae2d0dcda2edce4ab590422bb373b64f.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<script src="../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-8ea72dc5fed832574809a9c94082fbbb.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap-f3c2ea88cadbcfb37ba28ffa2c97cfc1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark-ae2d0dcda2edce4ab590422bb373b64f.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -79,7 +115,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../../index.html">
+    <a class="navbar-brand" href="../../../index.html">
     <span class="navbar-title">datafc Blog</span>
     </a>
   </div>
@@ -90,15 +126,15 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../index.html"> 
+    <a class="nav-link" href="../../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../posts/tr/index.html"> 
+    <a class="nav-link" href="../../../posts/tr/index.html"> 
 <span class="menu-text">Türkçe</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../../posts/en/index.html" aria-current="page"> 
+    <a class="nav-link" href="../../../posts/en/index.html"> 
 <span class="menu-text">English</span></a>
   </li>  
 </ul>
@@ -130,14 +166,29 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">datafc | English</h1>
-                      </div>
+      <h1 class="title">datafc v1.1.0 is Live!</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">Package</div>
+              </div>
+                  </div>
   </div>
     
   
   <div class="quarto-title-meta">
 
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Uraz Akgül </p>
+            </div>
+    </div>
       
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">February 6, 2025</p>
+      </div>
+    </div>
     
       
     </div>
@@ -151,7 +202,14 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#english-blog-posts" id="toc-english-blog-posts" class="nav-link active" data-scroll-target="#english-blog-posts">English Blog Posts</a></li>
+  <li><a href="#why-v1.1.0" id="toc-why-v1.1.0" class="nav-link active" data-scroll-target="#why-v1.1.0">Why v1.1.0?</a></li>
+  <li><a href="#new-features" id="toc-new-features" class="nav-link" data-scroll-target="#new-features">New Features</a>
+  <ul class="collapse">
+  <li><a href="#team-ids" id="toc-team-ids" class="nav-link" data-scroll-target="#team-ids">Team IDs</a></li>
+  <li><a href="#injury-time" id="toc-injury-time" class="nav-link" data-scroll-target="#injury-time">Injury Time</a></li>
+  <li><a href="#file-source-information" id="toc-file-source-information" class="nav-link" data-scroll-target="#file-source-information">File Source Information</a></li>
+  </ul></li>
+  <li><a href="#practical-example" id="toc-practical-example" class="nav-link" data-scroll-target="#practical-example">Practical Example</a></li>
   </ul>
 </nav>
     </div>
@@ -162,12 +220,55 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="english-blog-posts" class="level1">
-<h1>English Blog Posts</h1>
+<section id="why-v1.1.0" class="level1">
+<h1>Why v1.1.0?</h1>
+<p>This new version introduces important additions to the <code>match_data</code> dataset. These updates are designed to make data analysis more efficient and meaningful.</p>
+<p>Follow the steps below to upgrade to the latest version.</p>
+<p>If the <code>datafc</code> package is already installed, you can update to the latest version by running the following command in the terminal:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>pip install <span class="op">--</span>upgrade datafc</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>If you haven’t installed <code>datafc</code> before, use the following command:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>pip install datafc</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>For more details about the package, you can visit its <a href="https://pypi.org/project/datafc/" target="_blank">PyPI</a> or <a href="https://github.com/urazakgul/datafc" target="_blank">GitHub</a> pages.</p>
+</section>
+<section id="new-features" class="level1">
+<h1>New Features</h1>
+<section id="team-ids" class="level2">
+<h2 class="anchored" data-anchor-id="team-ids">Team IDs</h2>
+<p>The following columns have been added:</p>
 <ul>
-<li>📄 <a href="../../posts/en/post1/datafc-v100-is-live.html" target="_blank">datafc v1.0.0 is Live!</a></li>
-<li>📄 <a href="../../posts/en/post2/datafc-v110-is-live.html" target="_blank">datafc v1.1.0 is Live!</a></li>
+<li><code>home_team_id</code>: Home team ID</li>
+<li><code>away_team_id</code>: Away team ID</li>
 </ul>
+</section>
+<section id="injury-time" class="level2">
+<h2 class="anchored" data-anchor-id="injury-time">Injury Time</h2>
+<p>The following columns have been added:</p>
+<ul>
+<li><code>injury_time_1</code>: First-half injury time</li>
+<li><code>injury_time_2</code>: Second-half injury time</li>
+</ul>
+</section>
+<section id="file-source-information" class="level2">
+<h2 class="anchored" data-anchor-id="file-source-information">File Source Information</h2>
+<p>The saved file now includes a prefix indicating the data source.</p>
+</section>
+</section>
+<section id="practical-example" class="level1">
+<h1>Practical Example</h1>
+<p>Let’s check the team IDs and injury times for matchweek 24 of the 2024/25 Premier League season.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> datafc.sofascore <span class="im">import</span> match_data</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>match_df <span class="op">=</span> match_data(</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    tournament_id<span class="op">=</span><span class="dv">52</span>,</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    season_id<span class="op">=</span><span class="dv">63814</span>,</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    week_number<span class="op">=</span><span class="dv">22</span>,</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    enable_json_export<span class="op">=</span><span class="va">True</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The saved data file has been updated to include its source.</p>
+<p><img src="imgs/img1.PNG" class="img-fluid"></p>
+<p>With the newly added columns, you can now directly access team IDs and injury times.</p>
+<p><img src="imgs/img2.PNG" class="img-fluid"></p>
+<p>Best regards.</p>
 
 
 </section>

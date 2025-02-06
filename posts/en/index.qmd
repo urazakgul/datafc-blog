@@ -6,3 +6,4 @@ format: html
 # English Blog Posts
 
 - 📄 [datafc v1.0.0 is Live!](post1/datafc-v100-is-live.qmd){target="_blank"}
+- 📄 [datafc v1.1.0 is Live!](post2/datafc-v110-is-live.qmd){target="_blank"}

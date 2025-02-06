@@ -6,3 +6,4 @@ format: html
 # Türkçe Blog Yazıları
 
 - 📄 [datafc v1.0.0 Yayında!](post1/datafc-v100-yayinda.qmd){target="_blank"}
+- 📄 [datafc v1.1.0 Yayında!](post2/datafc-v110-yayinda.qmd){target="_blank"}

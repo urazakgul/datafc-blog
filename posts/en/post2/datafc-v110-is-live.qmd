@@ -1,0 +1,72 @@
+---
+title: "datafc v1.1.0 is Live!"
+author: "Uraz Akgül"
+date: "2025-02-06"
+categories: ["Package"]
+format: html
+---
+
+# Why v1.1.0?
+
+This new version introduces important additions to the `match_data` dataset. These updates are designed to make data analysis more efficient and meaningful.
+
+Follow the steps below to upgrade to the latest version.
+
+If the `datafc` package is already installed, you can update to the latest version by running the following command in the terminal:
+
+```python
+pip install --upgrade datafc
+```
+
+If you haven't installed `datafc` before, use the following command:
+
+```python
+pip install datafc
+```
+
+For more details about the package, you can visit its [PyPI](https://pypi.org/project/datafc/){target="_blank"} or [GitHub](https://github.com/urazakgul/datafc){target="_blank"} pages.
+
+# New Features
+
+## Team IDs
+
+The following columns have been added:
+
+* `home_team_id`: Home team ID
+* `away_team_id`: Away team ID
+
+## Injury Time
+
+The following columns have been added:
+
+* `injury_time_1`: First-half injury time
+* `injury_time_2`: Second-half injury time
+
+## File Source Information
+
+The saved file now includes a prefix indicating the data source.
+
+# Practical Example
+
+Let's check the team IDs and injury times for matchweek 24 of the 2024/25 Premier League season.
+
+```python
+from datafc.sofascore import match_data
+
+match_df = match_data(
+    tournament_id=17,
+    season_id=61627,
+    week_number=24,
+    enable_json_export=True
+)
+```
+
+The saved data file has been updated to include its source.
+
+![](imgs/img1.PNG)
+
+With the newly added columns, you can now directly access team IDs and injury times.
+
+![](imgs/img2.PNG)
+
+Best regards.
