@@ -1,0 +1,64 @@
+---
+title: "datafc v1.2.0 Yayında!"
+author: "Uraz Akgül"
+date: "2025-02-17"
+categories: ["Paket"]
+format: html
+---
+
+# Neden v1.2.0?
+
+Yeni sürümde `match_data` veri setine skorlarla ilgili önemli eklemeler yapıldı. Bu güncellemeler, veri analizi süreçlerini daha detaylı hale getirerek skor verilerine daha hızlı erişim sağlamak için tasarlandı.
+
+Yeni sürüme geçmek için aşağıdaki adımları takip edebilirsiniz.
+
+Eğer `datafc` paketi halihazırda yüklüyse, en son sürüme güncellemek için şu komutu terminalde çalıştırabilirsiniz:
+
+```python
+pip install --upgrade datafc
+```
+
+Eğer `datafc` paketini ilk kez yükleyecekseniz, şu komutu kullanabilirsiniz:
+
+```python
+pip install datafc
+```
+
+Paketle ilgili daha fazla bilgiye ulaşmak için [PyPI](https://pypi.org/project/datafc/){target="_blank"} veya [GitHub](https://github.com/urazakgul/datafc){target="_blank"} sayfasını ziyaret edebilirsiniz.
+
+# Yenilikler
+
+## Skor Bilgileri
+
+Aşağıdaki kolonlar eklendi:
+
+* `home_score_current`: Ev sahibi takımın en son kaydedilen skoru.
+* `home_score_display`: Ev sahibi takımın ekranda gösterilen skoru.
+* `home_score_period1`: Ev sahibi takımın ilk yarı sonunda attığı gol sayısı.
+* `home_score_period2`: Ev sahibi takımın ikinci yarıda attığı gol sayısı.
+* `home_score_normaltime`: Ev sahibi takımın normal sürede (90 dakika) attığı toplam gol sayısı.
+* `away_score_current`: Deplasman takımının en son kaydedilen skoru.
+* `away_score_display`: Deplasman takımının ekranda gösterilen skoru.
+* `away_score_period1`: Deplasman takımının ilk yarı sonunda attığı gol sayısı.
+* `away_score_period2`: Deplasman takımının ikinci yarıda attığı gol sayısı.
+* `away_score_normaltime`: Deplasman takımının normal sürede (90 dakika) attığı toplam gol sayısı.
+
+# Uygulama
+
+Süper Lig 2024/25 sezonu 23. haftasındaki takımların skor bilgilerine bakalım.
+
+```python
+from datafc.sofascore import match_data
+
+match_df = match_data(
+    tournament_id=52,
+    season_id=63814,
+    week_number=23
+)
+```
+
+Yeni eklenen kolonlar sayesinde, takımların attığı toplam ve periyot bazlı skorlarına doğrudan erişim sağlanabilir.
+
+![](imgs/img1.PNG)
+
+Sevgiler.

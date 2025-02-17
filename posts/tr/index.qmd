@@ -8,3 +8,4 @@ format: html
 - 📄 [datafc v1.0.0 Yayında!](post1/datafc-v100-yayinda.qmd){target="_blank"}
 - 📄 [datafc v1.1.0 Yayında!](post2/datafc-v110-yayinda.qmd){target="_blank"}
 - 📄 [Futbol Maçları İçin Daha İyi Tahminler: Dixon-Coles Modeli Nasıl Çalışır?](post3/futbol-maclari-icin-daha-iyi-tahminler-dixon-coles-modeli-nasil-calisir.qmd){target="_blank"}
+- 📄 [datafc v1.2.0 Yayında!](post4/datafc-v120-yayinda.qmd){target="_blank"}
