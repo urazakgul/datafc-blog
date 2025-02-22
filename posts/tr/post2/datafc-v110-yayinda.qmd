@@ -8,7 +8,7 @@ format: html
 
 # Neden v1.1.0?
 
-Yeni sürümde `match_data` veri setine önemli eklemeler yapıldı. Bu güncellemeler, veri analizi süreçlerini daha verimli ve anlamlı hale getirmek için tasarlandı.
+Yeni sürümde `match_data` veri setine önemli eklemeler yapıldı.
 
 Yeni sürüme geçmek için aşağıdaki adımları takip edebilirsiniz.
 

@@ -9,3 +9,4 @@ format: html
 - 📄 [datafc v1.1.0 is Live!](post2/datafc-v110-is-live.qmd){target="_blank"}
 - 📄 [Better Predictions for Football Matches: How Does the Dixon-Coles Model Work?](post3/better-predictions-for-football-matches-how-does-the-dixon-coles-model-work.qmd){target="_blank"}
 - 📄 [datafc v1.2.0 is Live!](post4/datafc-v120-is-live.qmd){target="_blank"}
+- 📄 [datafc v1.3.0 is Live!](post5/datafc-v130-is-live.qmd){target="_blank"}

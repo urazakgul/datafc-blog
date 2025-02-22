@@ -8,7 +8,7 @@ format: html
 
 # Why v1.1.0?
 
-This new version introduces important additions to the `match_data` dataset. These updates are designed to make data analysis more efficient and meaningful.
+This new version introduces important additions to the `match_data` dataset.
 
 Follow the steps below to upgrade to the latest version.
 

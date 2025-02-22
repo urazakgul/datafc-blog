@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Uraz Akgül">
-<meta name="dcterms.date" content="2025-02-17">
+<meta name="dcterms.date" content="2025-02-22">
 
-<title>datafc v1.2.0 Yayında! – datafc Blog</title>
+<title>datafc v1.3.0 Yayında! – datafc Blog</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -166,7 +166,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">datafc v1.2.0 Yayında!</h1>
+      <h1 class="title">datafc v1.3.0 Yayında!</h1>
                                 <div class="quarto-categories">
                 <div class="quarto-category">Paket</div>
               </div>
@@ -186,7 +186,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">February 17, 2025</p>
+        <p class="date">February 22, 2025</p>
       </div>
     </div>
     
@@ -202,11 +202,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#neden-v1.2.0" id="toc-neden-v1.2.0" class="nav-link active" data-scroll-target="#neden-v1.2.0">Neden v1.2.0?</a></li>
-  <li><a href="#yenilikler" id="toc-yenilikler" class="nav-link" data-scroll-target="#yenilikler">Yenilikler</a>
-  <ul>
-  <li><a href="#skor-bilgileri" id="toc-skor-bilgileri" class="nav-link" data-scroll-target="#skor-bilgileri">Skor Bilgileri</a></li>
-  </ul></li>
+  <li><a href="#neden-v1.3.0" id="toc-neden-v1.3.0" class="nav-link active" data-scroll-target="#neden-v1.3.0">Neden v1.3.0?</a></li>
+  <li><a href="#yenilikler" id="toc-yenilikler" class="nav-link" data-scroll-target="#yenilikler">Yenilikler</a></li>
   <li><a href="#uygulama" id="toc-uygulama" class="nav-link" data-scroll-target="#uygulama">Uygulama</a></li>
   </ul>
 </nav>
@@ -218,9 +215,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<section id="neden-v1.2.0" class="level1">
-<h1>Neden v1.2.0?</h1>
-<p>Yeni sürümde <code>match_data</code> veri setine skorlarla ilgili önemli eklemeler yapıldı.</p>
+<section id="neden-v1.3.0" class="level1">
+<h1>Neden v1.3.0?</h1>
+<p>Yeni sürümde <code>past_matches_data</code> fonksiyonu ile iki takımın geçmiş karşılaşmalarını kolayca çekmek mümkün hale geldi.</p>
 <p>Yeni sürüme geçmek için aşağıdaki adımları takip edebilirsiniz.</p>
 <p>Eğer <code>datafc</code> paketi halihazırda yüklüyse, en son sürüme güncellemek için şu komutu terminalde çalıştırabilirsiniz:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>pip install <span class="op">--</span>upgrade datafc</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -230,34 +227,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="yenilikler" class="level1">
 <h1>Yenilikler</h1>
-<section id="skor-bilgileri" class="level2">
-<h2 class="anchored" data-anchor-id="skor-bilgileri">Skor Bilgileri</h2>
-<p>Aşağıdaki kolonlar eklendi:</p>
-<ul>
-<li><code>home_score_current</code>: Ev sahibi takımın en son kaydedilen skoru.</li>
-<li><code>home_score_display</code>: Ev sahibi takımın ekranda gösterilen skoru.</li>
-<li><code>home_score_period1</code>: Ev sahibi takımın ilk yarı sonunda attığı gol sayısı.</li>
-<li><code>home_score_period2</code>: Ev sahibi takımın ikinci yarıda attığı gol sayısı.</li>
-<li><code>home_score_normaltime</code>: Ev sahibi takımın normal sürede (90 dakika) attığı toplam gol sayısı.</li>
-<li><code>away_score_current</code>: Deplasman takımının en son kaydedilen skoru.</li>
-<li><code>away_score_display</code>: Deplasman takımının ekranda gösterilen skoru.</li>
-<li><code>away_score_period1</code>: Deplasman takımının ilk yarı sonunda attığı gol sayısı.</li>
-<li><code>away_score_period2</code>: Deplasman takımının ikinci yarıda attığı gol sayısı.</li>
-<li><code>away_score_normaltime</code>: Deplasman takımının normal sürede (90 dakika) attığı toplam gol sayısı.</li>
-</ul>
-</section>
+<p>Turnuva, sezon ve haftaya göre oynanacak maçlarda bulunan takım çiftlerinin tüm tarihsel karşılaşmaları çekilebilecek.</p>
 </section>
 <section id="uygulama" class="level1">
 <h1>Uygulama</h1>
-<p>Süper Lig 2024/25 sezonu 23. haftasındaki takımların skor bilgilerine bakalım.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> datafc.sofascore <span class="im">import</span> match_data</span>
+<p>Süper Lig 2024/25 sezonu 24. haftasındaki takım çiftlerinin tarihsel karşılaşmalarına bakalım.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> datafc.sofascore <span class="im">import</span> past_matches_data</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>match_df <span class="op">=</span> match_data(</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>past_matches_df <span class="op">=</span> past_matches_data(</span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    tournament_id<span class="op">=</span><span class="dv">52</span>,</span>
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    season_id<span class="op">=</span><span class="dv">63814</span>,</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    week_number<span class="op">=</span><span class="dv">23</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    week_number<span class="op">=</span><span class="dv">24</span></span>
 <span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Yeni eklenen kolonlar sayesinde, takımların attığı toplam ve periyot bazlı skorlarına doğrudan erişim sağlanabilir.</p>
 <p><img src="imgs/img1.PNG" class="img-fluid"></p>
 <p>Sevgiler.</p>
 

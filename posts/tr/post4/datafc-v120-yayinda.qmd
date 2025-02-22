@@ -8,7 +8,7 @@ format: html
 
 # Neden v1.2.0?
 
-Yeni sürümde `match_data` veri setine skorlarla ilgili önemli eklemeler yapıldı. Bu güncellemeler, veri analizi süreçlerini daha detaylı hale getirerek skor verilerine daha hızlı erişim sağlamak için tasarlandı.
+Yeni sürümde `match_data` veri setine skorlarla ilgili önemli eklemeler yapıldı.
 
 Yeni sürüme geçmek için aşağıdaki adımları takip edebilirsiniz.
 

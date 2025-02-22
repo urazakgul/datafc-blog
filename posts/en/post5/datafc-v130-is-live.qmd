@@ -1,0 +1,49 @@
+---
+title: "datafc v1.3.0 is Live!"
+author: "Uraz Akgül"
+date: "2025-02-22"
+categories: ["Package"]
+format: html
+---
+
+# Why v1.3.0?
+
+This new version introduces the `past_matches_data` function, making it easier to fetch past encounters between two teams.
+
+Follow the steps below to upgrade to the latest version.
+
+If the `datafc` package is already installed, you can update to the latest version by running the following command in the terminal:
+
+```python
+pip install --upgrade datafc
+```
+
+If you haven't installed `datafc` before, use the following command:
+
+```python
+pip install datafc
+```
+
+For more details about the package, you can visit its [PyPI](https://pypi.org/project/datafc/){target="_blank"} or [GitHub](https://github.com/urazakgul/datafc){target="_blank"} pages.
+
+# New Features
+
+You can now fetch all historical encounters of team pairs in upcoming matches based on tournament, season, and matchweek.
+
+# Practical Example
+
+Let's check the historical encounters of team pairs for matchweek 25 of the 2024/25 Premier League season.
+
+```python
+from datafc.sofascore import past_matches_data
+
+past_matches_df = past_matches_data(
+    tournament_id=17,
+    season_id=61627,
+    week_number=25
+)
+```
+
+![](imgs/img1.PNG)
+
+Best regards.

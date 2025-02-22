@@ -8,7 +8,7 @@ format: html
 
 # Why v1.2.0?
 
-This new version introduces important additions to the `match_data` dataset related to scores. These updates are designed to make data analysis more detailed and provide faster access to score data.
+This new version introduces important additions to the `match_data` dataset related to scores.
 
 Follow the steps below to upgrade to the latest version.
 
