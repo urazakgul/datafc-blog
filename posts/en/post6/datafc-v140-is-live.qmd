@@ -1,0 +1,132 @@
+---
+title: "datafc v1.4.0 is Live!"
+author: "Uraz Akgül"
+date: "2025-03-16"
+categories: ["Package"]
+format: html
+---
+
+# Why v1.4.0?
+
+This new release expands data access to the following tournaments:
+
+* UEFA Champions League (UCL)
+* UEFA Europa League (UEL)
+* UEFA Europa Conference League (UECL)
+* UEFA Nations League (UNL)
+
+Follow the steps below to upgrade to the latest version.
+
+If the `datafc` package is already installed, you can update to the latest version by running the following command in the terminal:
+
+```python
+pip install --upgrade datafc
+```
+
+If you haven't installed `datafc` before, use the following command:
+
+```python
+pip install datafc
+```
+
+For more details about the package, you can visit its [PyPI](https://pypi.org/project/datafc/){target="_blank"} or [GitHub](https://github.com/urazakgul/datafc){target="_blank"} pages.
+
+# New Features
+
+The newly introduced `tournament_type` and `tournament_stage` parameters now allow access to UEFA tournament data. These parameters have been added to the `match_data` and `past_matches_data` functions, while all other functions remain unchanged.
+
+## Available Tournament Data
+
+For the 2024/25 season, the following tournament stages are now accessible:
+
+* For UCL, UEL, and UECL:
+  * First, second, and third qualification rounds
+  * Qualification Playoff round
+  * Matchdays 1 to 8 (up to Matchday 6 for UECL)
+  * Playoff round
+  * Round of 16
+  * Quarter-finals
+  * Semi-finals
+  * Final
+
+* For UEFA Nations League (UNL):
+  * Matchdays 1 to 6
+  * First qualification round
+  * Quarter-finals
+  * Semi-finals
+  * Third-place match
+  * Final
+
+## Tournament Type
+
+The `tournament_type` parameter must be set to "uefa".
+
+## Tournament Stages
+
+For the 2024/25 season, assign `week_number` and `tournament_stage` as follows:
+
+* For UCL, UEL, and UECL:
+  * First, second, and third qualification rounds
+    * `week_number`: 1, 2 ve 3
+    * `tournament_stage`: "qualification_round"
+  * Qualification Playoff round
+    * `week_number`: 636
+    * `tournament_stage`: "qualification_playoff"
+  * Group stage matchdays (1 to 8, UECL up to Matchday 6)
+    * `week_number`: 1, 2, 3, 4, 5, 6, 7 ve 8
+    * `tournament_stage`: "group_stage_week"
+  * Playoff round
+    * `week_number`: 636
+    * `tournament_stage`: "playoff_round"
+  * Round of 16
+    * `week_number`: 5
+    * `tournament_stage`: "round_of_16"
+  * Quarter-finals
+    * `week_number`: 27
+    * `tournament_stage`: "quarterfinals"
+  * Semi-finals
+    * `week_number`: 28
+    * `tournament_stage`: "semifinals"
+  * Final
+    * `week_number`: 29
+    * `tournament_stage`: "final"
+
+* For UEFA Nations League (UNL):
+  * Group stage matchdays (1 to 6)
+    * `week_number`: 1, 2, 3, 4, 5 ve 6
+    * `tournament_stage`: "group_stage_week"
+  * First qualification round
+    * `week_number`: 1
+    * `tournament_stage`: "qualification_round"
+  * Quarter-finals
+    * `week_number`: 27
+    * `tournament_stage`: "quarterfinals"
+  * Semi-finals
+    * `week_number`: 28
+    * `tournament_stage`: "semifinals"
+  * Third-place match
+    * `week_number`: 50
+    * `tournament_stage`: "match_for_3rd_place"
+  * Final
+    * `week_number`: 29
+    * `tournament_stage`: "final"
+
+# Practical Example
+
+Let's fetch the UEFA Champions League Round of 16 matches for the 2024/25 season:
+
+```python
+from datafc.sofascore import match_data
+
+match_df = match_data(
+    tournament_id=7,
+    season_id=61644,
+    week_number=5,
+    tournament_type="uefa",
+    tournament_stage="round_of_16"
+)
+```
+
+![](imgs/img1.PNG)
+
+Best regards.

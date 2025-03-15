@@ -1,0 +1,132 @@
+---
+title: "datafc v1.4.0 Yayında!"
+author: "Uraz Akgül"
+date: "2025-03-16"
+categories: ["Paket"]
+format: html
+---
+
+# Neden v1.4.0?
+
+Yeni sürümde aşağıdaki turnuvaların da verileri ulaşılabilir durumdadır.
+
+* UEFA Şampiyonlar Ligi (UCL)
+* UEFA Avrupa Ligi (UEL)
+* UEFA Avrupa Konferans Ligi (UECL)
+* UEFA Uluslar Ligi (UNL)
+
+Yeni sürüme geçmek için aşağıdaki adımları takip edebilirsiniz.
+
+Eğer `datafc` paketi halihazırda yüklüyse, en son sürüme güncellemek için şu komutu terminalde çalıştırabilirsiniz:
+
+```python
+pip install --upgrade datafc
+```
+
+Eğer `datafc` paketini ilk kez yükleyecekseniz, şu komutu kullanabilirsiniz:
+
+```python
+pip install datafc
+```
+
+Paketle ilgili daha fazla bilgiye ulaşmak için [PyPI](https://pypi.org/project/datafc/){target="_blank"} veya [GitHub](https://github.com/urazakgul/datafc){target="_blank"} sayfasını ziyaret edebilirsiniz.
+
+# Yenilikler
+
+Yeni eklenen `tournament_type` ve `tournament_stage` parametreleri ile beraber UEFA turnuvalarının verilerine erişim olanağı getirilmiştir. İlgili parametreler `match_data` ve `past_matches_data` fonksiyonlarına eklenmiştir. Diğer fonksiyonlar önceki sürümde olduğu gibi çalıştırılacaktır.
+
+## Ulaşılabilecek Turnuva Verileri
+
+İçinde bulunduğumuz 2024/25 sezonu baz alındığında turnuvaların ulaşılabilecek verileri aşağıdaki gibidir:
+
+* UCL, UEL ve UECL için:
+  * Birinci, ikinci ve üçüncü eleme turu
+  * Eleme Playoff round
+  * 1., 2., 3., 4., 5., 6., 7. ve 8. haftalar (UECL için 6. haftaya kadar)
+  * Playoff round
+  * Son 16
+  * Çeyrek final
+  * Yarı final
+  * Final
+
+* UEFA Uluslar Ligi (UNL) için:
+  * 1., 2., 3., 4., 5. ve 6. haftalar
+  * Birinci eleme turu
+  * Çeyrek final
+  * Yarı final
+  * Üçüncülük maçı
+  * Final
+
+## Turnuva Tipi
+
+`tournament_type` parametresi "uefa" olmalıdır.
+
+## Turnuva Aşamaları
+
+İçinde bulunduğumuz 2024/25 sezonu baz alındığında turnuvalar için girilecek `week_number` ve `tournament_stage` değerleri aşağıdaki gibidir:
+
+* UCL, UEL ve UECL için:
+  * Birinci, ikinci ve üçüncü eleme turu
+    * `week_number`: 1, 2 ve 3
+    * `tournament_stage`: "qualification_round"
+  * Eleme Playoff round
+    * `week_number`: 636
+    * `tournament_stage`: "qualification_playoff"
+  * 1., 2., 3., 4., 5., 6., 7. ve 8. haftalar (UECL için 6. haftaya kadar)
+    * `week_number`: 1, 2, 3, 4, 5, 6, 7 ve 8
+    * `tournament_stage`: "group_stage_week"
+  * Playoff round
+    * `week_number`: 636
+    * `tournament_stage`: "playoff_round"
+  * Son 16
+    * `week_number`: 5
+    * `tournament_stage`: "round_of_16"
+  * Çeyrek final
+    * `week_number`: 27
+    * `tournament_stage`: "quarterfinals"
+  * Yarı final
+    * `week_number`: 28
+    * `tournament_stage`: "semifinals"
+  * Final
+    * `week_number`: 29
+    * `tournament_stage`: "final"
+
+* UEFA Uluslar Ligi (UNL) için:
+  * 1., 2., 3., 4., 5. ve 6. haftalar
+    * `week_number`: 1, 2, 3, 4, 5 ve 6
+    * `tournament_stage`: "group_stage_week"
+  * Birinci eleme turu
+    * `week_number`: 1
+    * `tournament_stage`: "qualification_round"
+  * Çeyrek final
+    * `week_number`: 27
+    * `tournament_stage`: "quarterfinals"
+  * Yarı final
+    * `week_number`: 28
+    * `tournament_stage`: "semifinals"
+  * Üçüncülük maçı
+    * `week_number`: 50
+    * `tournament_stage`: "match_for_3rd_place"
+  * Final
+    * `week_number`: 29
+    * `tournament_stage`: "final"
+
+# Uygulama
+
+UEFA Şampiyonlar Ligi 2024/25 sezonu Son 16 maçlarını çekelim.
+
+```python
+from datafc.sofascore import match_data
+
+match_df = match_data(
+    tournament_id=7,
+    season_id=61644,
+    week_number=5,
+    tournament_type="uefa",
+    tournament_stage="round_of_16"
+)
+```
+
+![](imgs/img1.PNG)
+
+Sevgiler.
